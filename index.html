@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HavaZ Kosmetik | Timeless Beauty & Organic Care</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="top-bar">
+        Dapatkan Diskon 10% untuk Pembelian Pertama dengan Kode: <strong>HAVAZNEW</strong>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-top">
+            <div class="search-container">
+                <i class="fas fa-search"></i>
+                <input type="text" id="productSearch" placeholder="Cari kecantikanmu...">
+            </div>
+            
+            <div class="brand-logo">HavaZ Haviz Fawwaz</div>
+            
+            <div class="nav-actions">
+                <div class="user-link"><i class="far fa-user"></i></div>
+                <div class="cart-trigger" onclick="toggleCart(true)">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span id="cart-counter">0</span>
+                </div>
+            </div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Beranda</a></li>
+            <li><a href="#shop">Koleksi</a></li>
+            <li><a href="#about">Filosofi</a></li>
+            <li><a href="#contact">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-inner">
+            <span class="fade-in">Natural & Glow</span>
+            <h1 class="fade-in">Definisi Baru<br>Kecantikan Organik</h1>
+            <p class="fade-in">Diformulasikan di laboratorium Prancis dengan bahan dasar botani asli Indonesia.</p>
+            <a href="#shop" class="btn-primary fade-in">Jelajahi Produk</a>
+        </div>
+    </header>
+
+    <section id="shop" class="shop-container">
+        <div class="section-heading">
+            <h2>Pilihan Editor</h2>
+            <div class="divider"></div>
+        </div>
+
+        <div class="filter-tabs">
+            <button class="tab-link active" onclick="filterItems('all')">Semua</button>
+            <button class="tab-link" onclick="filterItems('skincare')">Skincare</button>
+            <button class="tab-link" onclick="filterItems('makeup')">Makeup</button>
+            <button class="tab-link" onclick="filterItems('fragrance')">Fragrance</button>
+        </div>
+
+        <div class="product-grid" id="mainProductGrid">
+            </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>HavaZ: Dari Alam untuk Anda</h2>
+                <p>Kami percaya bahwa kulit yang sehat adalah investasi terbaik. Setiap produk HavaZ bebas dari paraben, sulfat, dan bahan kimia berbahaya lainnya.</p>
+                <div class="about-icons">
+                    <div class="icon-item"><i class="fas fa-leaf"></i> <span>Vegan</span></div>
+                    <div class="icon-item"><i class="fas fa-rabbit"></i> <span>No Animal Testing</span></div>
+                </div>
+            </div>
+            <div class="about-img">
+                <img src="https://images.unsplash.com/photo-1596462502278-27bfdc4033c8?auto=format&fit=crop&w=600&q=80" alt="HavaZ Ingredients">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3>HavaZ</h3>
+                <p>Elegansi dalam setiap sentuhan.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Bantuan</h4>
+                <a href="#">Lacak Pesanan</a>
+                <a href="#">FAQ</a>
+                <a href="#">Pengembalian</a>
+            </div>
+            <div class="footer-social">
+                <h4>Ikuti Kami</h4>
+                <div class="social-btns">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            &copy; 2026 HavaZ Kosmetik Official.
+        </div>
+    </footer>
+
+    <div id="cartOverlay" class="cart-overlay" onclick="toggleCart(false)"></div>
+    <div id="cartSidebar" class="cart-sidebar">
+        <div class="cart-title">
+            <h3>Keranjang Belanja</h3>
+            <i class="fas fa-times" onclick="toggleCart(false)"></i>
+        </div>
+        <div id="cartContent" class="cart-body">
+            </div>
+        <div class="cart-total">
+            <div class="total-row">
+                <span>Total:</span>
+                <span id="grandTotal">Rp 0</span>
+            </div>
+            <button class="btn-checkout" onclick="checkoutToWA()">Pesan Sekarang (WA)</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
